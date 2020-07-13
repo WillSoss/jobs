@@ -1,5 +1,5 @@
 # WillSoss.Jobs
-A collection of Runly jobs I use at home. Learn more how to [get started](https://www.runly.io/docs/getting-started/) with [Runly](https://www.runly.io/).
+A collection of Runly jobs I use at home. Learn how to [get started](https://www.runly.io/docs/getting-started/) with [Runly](https://www.runly.io/).
 
 ## SyncDirectory
 Copies a source directory and all its subdirectories and files contained within to a destination path. You can optionally ignore `UnauthorizedAccessExceptions`.
