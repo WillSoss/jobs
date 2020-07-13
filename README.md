@@ -23,8 +23,8 @@ Copies a source directory and all its subdirectories and files contained within 
 
 **destination** - Path to copy to.
 
-**preview** - Makes the job run and tell you what it'll do without copying anything.
+**preview** - Makes the job tell you what it'll do without copying anything.
 
 **ignoreUnauthorizedAccessException** - Prevents the job from stopping when this exception occurs.
 
-**parallelTaskCount** - How many files to copy simultaneously.
+**parallelTaskCount** - Number of files to copy simultaneously.
