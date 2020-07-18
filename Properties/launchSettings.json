@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "WillSoss.Jobs": {
+      "commandName": "Project"
+    },
+    "MediaImporter": {
+      "commandName": "Project",
+      "commandLineArgs": "run ..\\..\\..\\MediaImporter.json"
+    }
+  }
+}

@@ -26,17 +26,10 @@ namespace WillSoss.Jobs
 			return base.InitializeAsync();
 		}
 
-		public override IAsyncEnumerable<string> GetItemsAsync() => GetFilesIn(Config.Source).Select(file => Path.GetRelativePath(Config.Source, file)).ToAsyncEnumerable();
-
-		private IEnumerable<string> GetFilesIn(string dir)
-		{
-			foreach (var file in Directory.GetFiles(dir))
-				yield return file;
-
-			foreach (var subdir in Directory.GetDirectories(dir))
-				foreach (var file in GetFilesIn(subdir))
-					yield return file;
-		}
+		public override IAsyncEnumerable<string> GetItemsAsync() => 
+			Directory.GetFiles(Config.Source, "*", SearchOption.AllDirectories)
+			.Select(file => Path.GetRelativePath(Config.Source, file))
+			.ToAsyncEnumerable();
 
 		public override async Task<Result> ProcessAsync(string file)
 		{
