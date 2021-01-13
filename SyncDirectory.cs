@@ -37,7 +37,13 @@ namespace WillSoss.Jobs
 			var destFile = Path.Combine(Config.Destination, file);
 
 			if (File.Exists(destFile))
-				return Result.Success("Already Exists");
+			{
+				var destInfo = new FileInfo(destFile);
+				var sourceInfo = new FileInfo(sourceFile);
+
+				if (destInfo.Length == sourceInfo.Length)
+					return Result.Success("Already Exists");
+			}
 
 			try
 			{
